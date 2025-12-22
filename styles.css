@@ -12,7 +12,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    direction: rtl;
     transition: all 0.3s ease;
 }
 
@@ -270,4 +269,8 @@ h2.light-mode {
     h2 {
         font-size: 0.85rem;
     }
+}
+
+#company {
+    font-size: 1.1rem;
 }
