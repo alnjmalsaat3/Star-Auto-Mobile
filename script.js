@@ -10,7 +10,7 @@ fetch('data.json')
             company: data.company || '',
             name: data.name || '',
             title: data.title || '',
-         //   email: data.email || '',
+            email: data.email || '',
             email1: data.email1 || '',
             website: data.website || '',
             whatsapp: data.whatsapp || ''
@@ -111,3 +111,4 @@ fetch('data.json')
         console.error('خطأ في تحميل البيانات:', error);
         alert('حدث خطأ في تحميل البيانات، يرجى التحقق من اتصال الإنترنت أو ملف data.json');
     });
+
