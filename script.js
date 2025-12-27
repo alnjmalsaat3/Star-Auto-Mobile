@@ -64,7 +64,7 @@ fetch('data.json')
                 'BEGIN:VCARD',
                 'VERSION:3.0',
                 `ORG:${elements.company}`,
-                // `N:${(elements.name || '').split(' ').reverse().join(';')}`,
+                `N:${(elements.name || '').split(' ').join(';')}`,
                 `FN:${elements.name}`,
                 `TITLE:${elements.title}`,
                 elements.email ? `EMAIL;TYPE=PREF:${elements.email}` : '',
@@ -109,6 +109,7 @@ fetch('data.json')
         console.error('خطأ في تحميل البيانات:', error);
         alert('حدث خطأ في تحميل البيانات، يرجى التحقق من اتصال الإنترنت أو ملف data.json');
     });
+
 
 
 
