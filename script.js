@@ -70,7 +70,7 @@ fetch('data.json')
                 `FN:${elements.name}`,
                 `TITLE:${elements.title}`,
                 elements.email ? `EMAIL;TYPE=PREF:${elements.email}` : '',
-                elements.email1 ? `EMAIL;TYPE=WORK,INTERNET:${elements.email1}` : '',
+                elements.email1 ? `EMAIL;TYPE=WORK:${elements.email1}` : '',
                 elements.website ? `URL:${elements.website}` : '',
                 elements.whatsapp ? `TEL;TYPE=Phone:${elements.whatsapp}` : '',
                 'END:VCARD'
@@ -111,6 +111,7 @@ fetch('data.json')
         console.error('خطأ في تحميل البيانات:', error);
         alert('حدث خطأ في تحميل البيانات، يرجى التحقق من اتصال الإنترنت أو ملف data.json');
     });
+
 
 
 
