@@ -58,16 +58,14 @@ fetch('data.json')
             websiteElement.textContent = elements.website;
         }
 
-
-
         // تحميل vCard
         window.downloadVCard = function() {
             const vCardData = [
                 'BEGIN:VCARD',
                 'VERSION:3.0',
                 `ORG:${elements.company}`,
-                `N:${(elements.name || '').split(' ').reverse().join(';')}`,
-                `FN:${elements.name}`,
+                `N:;;;`,                     // نسيب التقسيم فاضي
+                `FN:${elements.name || ''}`, // 
                 `TITLE:${elements.title}`,
                 elements.email ? `EMAIL;TYPE=PREF:${elements.email}` : '',
                 elements.email1 ? `EMAIL;TYPE=WORK:${elements.email1}` : '',
@@ -111,6 +109,7 @@ fetch('data.json')
         console.error('خطأ في تحميل البيانات:', error);
         alert('حدث خطأ في تحميل البيانات، يرجى التحقق من اتصال الإنترنت أو ملف data.json');
     });
+
 
 
 
