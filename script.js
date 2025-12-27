@@ -34,7 +34,12 @@ fetch('data.json')
             emailElement.href = `mailto:${elements.email}`;
             emailElement.textContent = elements.email;
         }
-
+        // واتساب
+        const whatsappElement = document.getElementById('whatsapp');
+        if (whatsappElement) {
+            whatsappElement.href = `https://wa.me/${elements.whatsapp}`;
+            whatsappElement.textContent = elements.whatsapp;
+        }
         // الإيميل الثاني
         const emailElement1 = document.getElementById('email1');
         if (emailElement1) {
@@ -53,12 +58,7 @@ fetch('data.json')
             websiteElement.textContent = elements.website;
         }
 
-        // واتساب
-        const whatsappElement = document.getElementById('whatsapp');
-        if (whatsappElement) {
-            whatsappElement.href = `https://wa.me/${elements.whatsapp}`;
-            whatsappElement.textContent = elements.whatsapp;
-        }
+
 
         // تحميل vCard
         window.downloadVCard = function() {
@@ -111,5 +111,6 @@ fetch('data.json')
         console.error('خطأ في تحميل البيانات:', error);
         alert('حدث خطأ في تحميل البيانات، يرجى التحقق من اتصال الإنترنت أو ملف data.json');
     });
+
 
 
